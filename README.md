@@ -20,8 +20,7 @@ Projeto estruturado com boas práticas, paralelismo e pronto para escalar.
 
 ## 📂 Estrutura
 
-```
-
+```yml
 .
 ├── cmd/
 │   └── api/            # entrypoint da aplicação
@@ -150,10 +149,3 @@ GET /health
 
 Retorna `200 OK` se a API e o banco estiverem funcionando.
 
----
-
-## 📜 Licença
-
-MIT
-
-```
