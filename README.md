@@ -100,6 +100,18 @@ docker-compose up -d
 migrate -path migrations -database "postgres://postgres:postgres@localhost:5432/catsdb?sslmode=disable" up
 ```
 
+### 3. Caso Já tenha o postgres na máquina, crie o banco ***catsdb***
+
+* Com usuário e senha *postgres*
+
+```bash
+go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+```
+
+```bash
+migrate -path migrations -database "postgres://postgres:postgres@localhost:5432/catsdb?sslmode=disable" up
+```
+
 ### 4. Rode a aplicação
 
 ```bash
@@ -149,3 +161,5 @@ GET /health
 
 Retorna `200 OK` se a API e o banco estiverem funcionando.
 
+![alt text](image.png)
+![alt text](image-1.png)

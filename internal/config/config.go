@@ -36,7 +36,7 @@ func getEnvDuration(key, def string) time.Duration {
 func MustLoad() Config {
 	return Config{
 		AppAddr:           getEnvString("APP_ADDR", ":8080"),
-		DBDsn:             getEnvString("DB_DSN", "postgres://cat_user:cat_password@localhost:5432/cat_db?sslmode=disable"),
+		DBDsn:             getEnvString("DB_DSN", "postgres://postgres:postgres@localhost:5432/catsdb?sslmode=disable"),
 		DBMaxConns:        getEnvInt32("DB_MAX_CONNS", "10"),
 		DBMinConns:        getEnvInt32("DB_MIN_CONNS", "2"),
 		DBMaxIdleTime:     getEnvDuration("DB_MAX_IDLE_TIME", "30s"),

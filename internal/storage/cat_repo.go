@@ -34,7 +34,7 @@ Ele permite, por exemplo, cancelar uma consulta se ela demorar demais ou se a re
 Assim, evita travamentos e libera recursos corretamente.
 */
 
-func (repository *CatRepository) Create(ctx context.Context, in *domain.CatCreate) (domain.Cat, error) {
+func (repository *CatRepository) Create(ctx context.Context, in domain.CatCreate) (domain.Cat, error) {
 	// Cria um novo registro de gato no banco de dados
 
 	row := repository.db.QueryRow(
